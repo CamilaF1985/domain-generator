@@ -8,7 +8,7 @@ function generarCombinaciones() {
     // Inicializar un array para almacenar las combinaciones
     let combinaciones = pronombres.flatMap(pronombre =>
         adjetivos.flatMap(adjetivo =>
-            sustantivos.map(sustantivo => `${pronombre}${adjetivo}${sustantivo}.com`)
+            sustantivos.flatMap(sustantivo => `${pronombre}${adjetivo}${sustantivo}.com`)
         )
     );
 
